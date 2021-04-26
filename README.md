@@ -9,14 +9,46 @@ Press & Hold extensions for Mac
 ## Installation
 
 - Disable System [Integrity Protection](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection).
-- Open folder: `/System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/`
-- Backup the keyboard plist file(s) you want to replace.
-- Copy and replace files.
+- Continue in [Recovery mode](https://support.apple.com/en-us/HT201314) or start it.
+- Open Terminal.
+- Unmount system volume with: `sudo mount -uw /`. Note: After reboot it will be mounted back automatically.
+- Use cURL to replace the Keyboard plist files.
+    - Original file is published here also with `-orig` in case you may need to restore it.
+    - Backup the keyboard plist file(s) you want to replace.
+
+cURL command (for `Keyboard-en.plist`):
+
+```sh
+cd /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/ && curl -sS https://raw.githubusercontent.com/raisty/pah/master/Keyboard-en.plist -o Keyboard-en.plist
+```
+
+- Enable System [Integrity Protection](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection).
+
+## Uninstall / Restore
+
+You can replace current `keyboard plist` using your backup or "most common" plist located in this repo.
+
+- Disable System [Integrity Protection](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection).
+- Continue in [Recovery mode](https://support.apple.com/en-us/HT201314) or start it.
+- Open Terminal.
+- Unmount system volume with: `sudo mount -uw /`. Note: After reboot it will be mounted back automatically.
+- Use cURL to replace the Keyboard plist files.
+
+cURL command (for `Keyboard-en.plist`):
+
+```sh
+cd /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/ && curl -sS https://raw.githubusercontent.com/raisty/pah/master/Keyboard-en-orig.plist -o Keyboard-en.plist
+```
+
 - Enable System [Integrity Protection](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection).
 
 ## Contribution
 
 Feel free to distribute, copy, contribute, comment, change the content. Fork and comments welcome.
+
+If you have idea how to improve another keyboard input feel free to share your setup.
+
+We follow the macOS keyboard setup with the conjuction of [Compose table](https://help.ubuntu.com/community/GtkComposeTable) and most used [emoji symbols](https://emojipedia.org/).
 
 ## Disclaimer
 
