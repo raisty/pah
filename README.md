@@ -3,7 +3,7 @@ Press & Hold extensions for Mac
 
 ## Requirements
 
-- macOS Sierra and more
+- macOS Sierra and higher
 - active Press & Hold (by default)
 
 ## Installation
