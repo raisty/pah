@@ -19,7 +19,7 @@ Press & Hold extensions for Mac
 cURL command (for `Keyboard-en.plist`):
 
 ```sh
-cd /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/ && curl -sS https://raw.githubusercontent.com/raisty/pah/master/Keyboard-en.plist -o Keyboard-en.plist
+cd /System/Library/Input\ Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/ && curl -sS https://raw.githubusercontent.com/raisty/pah/master/Keyboard-en.plist -o Keyboard-en.plist
 ```
 
 - Enable System [Integrity Protection](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection).
@@ -37,7 +37,7 @@ You can replace current `keyboard plist` using your backup or "most common" plis
 cURL command (for `Keyboard-en.plist`):
 
 ```sh
-cd /System/Library/Input Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/ && curl -sS https://raw.githubusercontent.com/raisty/pah/master/Keyboard-en-orig.plist -o Keyboard-en.plist
+cd /System/Library/Input\ Methods/PressAndHold.app/Contents/PlugIns/PAH_Extension.appex/Contents/Resources/ && curl -sS https://raw.githubusercontent.com/raisty/pah/master/Keyboard-en-orig.plist -o Keyboard-en.plist
 ```
 
 - Enable System [Integrity Protection](https://developer.apple.com/documentation/security/disabling_and_enabling_system_integrity_protection).
